@@ -34,16 +34,17 @@ export const LogoutPage: React.FC<{
         <div>
           <h1>{error || success}</h1>
           <p>
-            {'What would you like to do next?'}
+            {'Ne yapmak istersiniz?'}
             {typeof productsPage === 'object' && productsPage?.slug && (
               <Fragment>
                 {' '}
-                <Link href={`/${productsPage.slug}`}>Click here</Link>
-                {` to shop.`}
+                {`alış veriş yapmak için `}
+
+                <Link href={`/${productsPage.slug}`}>devam edin</Link>
               </Fragment>
             )}
-            {` To log back in, `}
-            <Link href="/login">click here</Link>
+            {` Tekrar giriş yapmak için, `}
+            <Link href="/login">devam edin</Link>
             {'.'}
           </p>
         </div>
