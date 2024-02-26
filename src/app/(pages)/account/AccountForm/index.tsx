@@ -120,7 +120,7 @@ const AccountForm: React.FC = () => {
       ) : (
         <Fragment>
           <p>
-            {'Change your password below, or '}
+            {'Şifreni değiştir yada '}
             <button
               type="button"
               className={classes.changePassword}
@@ -133,7 +133,7 @@ const AccountForm: React.FC = () => {
           <Input
             name="password"
             type="password"
-            label="Password"
+            label="Şifre"
             required
             register={register}
             error={errors.password}
@@ -141,17 +141,17 @@ const AccountForm: React.FC = () => {
           <Input
             name="passwordConfirm"
             type="password"
-            label="Confirm Password"
+            label="Şifre Onay"
             required
             register={register}
-            validate={value => value === password.current || 'The passwords do not match'}
+            validate={value => value === password.current || 'Şifreler eşleşmiyor'}
             error={errors.passwordConfirm}
           />
         </Fragment>
       )}
       <Button
         type="submit"
-        label={isLoading ? 'Processing' : changePassword ? 'Change Password' : 'Update Account'}
+        label={isLoading ? 'Processing' : changePassword ? 'Şifre Değiştir' : 'Hesabımı Güncelle'}
         disabled={isLoading}
         appearance="primary"
         className={classes.submit}
