@@ -6,6 +6,7 @@ import { Gutter } from '../../_components/Gutter'
 import RichText from '../../_components/RichText'
 
 import classes from './index.module.scss'
+import { title } from 'process'
 
 export type RelatedProductsProps = {
   blockType: 'relatedProducts'
@@ -20,30 +21,15 @@ export const RelatedProducts: React.FC<RelatedProductsProps> = props => {
 
   return (
     <div className={classes.relatedProducts}>
-      {introContent && (
-        <Gutter className={classes.introContent}>
-          <RichText content={introContent} />
-        </Gutter>
-      )}
       <Gutter>
+        <h3 className={classes.title} >Benzer Ürünler</h3>
         <div className={classes.grid}>
           {docs?.map((doc, index) => {
             if (typeof doc === 'string') return null
 
             return (
-              <div
-                key={index}
-                className={[
-                  classes.column,
-                  docs.length === 2 && classes['cols-half'],
-                  docs.length >= 3 && classes['cols-thirds'],
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-              >
-                <Card relationTo={relationTo} doc={doc} showCategories />
-              </div>
-            )
+                <Card key={doc.id} relationTo={relationTo} doc={doc} showCategories />
+             )
           })}
         </div>
       </Gutter>
