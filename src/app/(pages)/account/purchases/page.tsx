@@ -50,7 +50,7 @@ export default async function Purchases() {
             })}
           </ul>
         ) : (
-          <div className={classes.noPurchases}>You have no purchases.</div>
+          <div className={classes.noPurchases}>Alışverişiniz bulunmamaktadır.</div>
         )}
       </div>
     </div>

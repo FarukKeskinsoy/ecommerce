@@ -53,7 +53,7 @@ const AccountForm: React.FC = () => {
         if (response.ok) {
           const json = await response.json()
           setUser(json.doc)
-          setSuccess('Successfully updated account.')
+          setSuccess('Hesap bilgileri başarıyla güncellendi.')
           setError('')
           setChangePassword(false)
           reset({
@@ -63,7 +63,7 @@ const AccountForm: React.FC = () => {
             passwordConfirm: '',
           })
         } else {
-          setError('There was a problem updating your account.')
+          setError('Bir hata meydana geldi.')
         }
       }
     },
@@ -97,24 +97,24 @@ const AccountForm: React.FC = () => {
         <Fragment>
           <Input
             name="email"
-            label="Email Address"
+            label="E-Posta Adresiniz"
             required
             register={register}
             error={errors.email}
             type="email"
           />
-          <Input name="name" label="Name" register={register} error={errors.name} />
+          <Input name="name" label="İsminiz" register={register} error={errors.name} />
 
           <p>
-            {'Change your account details below, or '}
+            {'Hesap bilgilerinizi değiştirin yada '}
             <button
               type="button"
               className={classes.changePassword}
               onClick={() => setChangePassword(!changePassword)}
             >
-              click here
+              buradan
             </button>
-            {' to change your password.'}
+            {' şifrenizi değiştirin.'}
           </p>
         </Fragment>
       ) : (
