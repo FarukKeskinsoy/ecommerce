@@ -50,7 +50,7 @@ export default async function Orders() {
     <Gutter className={classes.orders}>
       <h1>Orders</h1>
       {(!orders || !Array.isArray(orders) || orders?.length === 0) && (
-        <p className={classes.noOrders}>You have no orders.</p>
+        <p className={classes.noOrders}>Siarpişiniz bulunmamaktadır.</p>
       )}
       <RenderParams />
       {orders && orders.length > 0 && (
