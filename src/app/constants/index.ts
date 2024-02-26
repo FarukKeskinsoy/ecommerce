@@ -1,22 +1,22 @@
 export const inclusions = [
     {
-      title: 'Free Shipping',
-      description: 'Free shipping for order above $150',
+      title: 'Ücretsiz Kargo',
+      description: '1500 ₺ ve üzerine ücretsiz kargo',
       icon: '/assets/icons/shipping.svg',
     },
     {
-      title: 'Money Guarantee',
-      description: 'Within 30 days for an exchange',
+      title: 'İade',
+      description: '3 gün içerisinde iade hakkı',
       icon: '/assets/icons/dollar.svg',
     },
     {
-      title: 'Online Support',
-      description: '24 hours a day, 7 days a week',
+      title: 'Canlı Destek',
+      description: '7 gün, 24 saat',
       icon: '/assets/icons/support.svg',
     },
     {
-      title: 'Flexible Payment',
-      description: 'Pay with multiple credit cards',
+      title: 'Ödeme Kolaylığı',
+      description: 'Güvenli ödeme',
       icon: '/assets/icons/payment.svg',
     },
   ]

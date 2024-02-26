@@ -38,10 +38,10 @@ const Filters = ({categories}:{categories:Category[]}) => {
                 })}
             </div>
             <HR className={classes.hr} />
-            <h6 className={classes.title} >Sort By</h6>
+            <h6 className={classes.title} >Sırala</h6>
             <div className={classes.categories} >
                 <RadioButton
-                    label='Latest'
+                    label='En Yeni'
                     value='-createdAt'
                     isSelected={sort === '-createdAt'}
                     onRadioChange={handleSort}
@@ -49,7 +49,7 @@ const Filters = ({categories}:{categories:Category[]}) => {
 
                 />
                 <RadioButton
-                    label='Oldest'
+                    label='En Eski'
                     value='createdAt'
                     isSelected={sort === 'createdAt'}
                     onRadioChange={handleSort}
